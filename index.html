@@ -1,0 +1,4577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .frame1 {
+      width: 1920px;
+      height: 1080px;
+      padding-left: 64px;
+      padding-right: 64px;
+      padding-top: 104px;
+      padding-bottom: 104px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 57px;
+      background-color: #ffffff;
+    }
+
+    .border {
+      align-self: flex-start;
+      left: 64px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot2 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot3 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .body {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline2 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title3 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text2 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon2 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector1 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription2 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #cc00ff;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle2 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle1 {
+      width: 20px;
+      height: 20px;
+      background-color: #0082fa;
+    }
+
+    .performance {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text3 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame5 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame6 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .border2 {
+      align-self: flex-start;
+      left: 371px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header2 {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline3 {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title5 {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text4 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon3 {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot4 {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot5 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot6 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription3 {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #42b25b;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle3 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .body2 {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task2 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline4 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title7 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text5 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon4 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector12 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription4 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle4 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option2 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type2 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle12 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance2 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text6 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame52 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame62 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료2 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task3 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 169px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline5 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title9 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text7 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon5 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector13 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription5 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle5 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option3 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type3 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle13 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance3 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text8 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame53 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame63 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료3 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .border3 {
+      align-self: flex-start;
+      left: 678px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header3 {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline6 {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title11 {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text9 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon6 {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot7 {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot8 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot9 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription6 {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #ff0000;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle6 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #ffffff;
+    }
+
+    .body3 {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task4 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline7 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title13 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text10 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon7 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector14 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription7 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle7 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option4 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type4 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle14 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance4 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text11 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame54 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame64 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료4 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task5 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 169px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline8 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title15 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text12 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon8 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector15 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription8 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle8 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option5 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type5 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle15 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance5 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text13 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame55 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame65 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료5 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task6 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 338px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline9 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title17 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text14 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon9 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector16 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription9 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle9 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option6 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type6 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle16 {
+      width: 20px;
+      height: 20px;
+      background-color: #0082fa;
+    }
+
+    .performance6 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 10px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text15 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 10px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame56 {
+      align-self: flex-start;
+      left: 51px;
+      position: absolute;
+      width: 109px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame66 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 34px;
+    }
+
+    .미완료6 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task7 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 507px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline10 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title19 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text16 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon10 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector17 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription10 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle10 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option7 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type7 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle17 {
+      width: 20px;
+      height: 20px;
+      background-color: #0082fa;
+    }
+
+    .performance7 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 10px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text17 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 10px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame57 {
+      align-self: flex-start;
+      left: 51px;
+      position: absolute;
+      width: 109px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame67 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 34px;
+    }
+
+    .미완료7 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task8 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 676px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline11 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title21 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text18 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon11 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector18 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription11 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle11 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option8 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type8 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle18 {
+      width: 20px;
+      height: 20px;
+      background-color: #0082fa;
+    }
+
+    .performance8 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 10px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text19 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 10px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame58 {
+      align-self: flex-start;
+      left: 51px;
+      position: absolute;
+      width: 109px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame68 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 34px;
+    }
+
+    .미완료8 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task9 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 845px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline12 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title23 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text20 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon12 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector19 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription12 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle12 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option9 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type9 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle19 {
+      width: 20px;
+      height: 20px;
+      background-color: #0082fa;
+    }
+
+    .performance9 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 10px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text21 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 10px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame59 {
+      align-self: flex-start;
+      left: 51px;
+      position: absolute;
+      width: 109px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame69 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 34px;
+    }
+
+    .미완료9 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .border4 {
+      align-self: flex-start;
+      left: 985px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header4 {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline13 {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title25 {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text22 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon13 {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot10 {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot11 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot12 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription13 {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle13 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .body4 {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task10 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline14 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title27 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text23 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon14 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector110 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription14 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle14 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option10 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type10 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle110 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance10 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text24 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame510 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame610 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료10 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task11 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 169px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline15 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title29 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text25 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon15 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector111 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription15 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle15 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option11 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type11 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle111 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance11 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text26 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame511 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame611 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료11 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .border5 {
+      align-self: flex-start;
+      left: 1292px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header5 {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline16 {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title31 {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text27 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon16 {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot13 {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot14 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot15 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription16 {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #42b25b;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle16 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .body5 {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task12 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline17 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title33 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text28 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon17 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector112 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription17 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle17 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option12 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type12 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle112 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance12 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text29 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame512 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame612 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료12 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task13 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 169px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline18 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title35 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text30 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon18 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector113 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription18 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle18 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option13 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type13 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle113 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance13 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text31 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame513 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame613 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료13 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .border6 {
+      align-self: flex-start;
+      left: 1599px;
+      top: 104px;
+      position: absolute;
+      width: 250px;
+      height: 846px;
+      border-radius: 5px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #f5f5f5;
+    }
+
+    .header6 {
+      width: 230px;
+      height: 65px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background-color: #f5f5f5;
+      position: absolute;
+    }
+
+    .headline19 {
+      width: 230px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title37 {
+      width: 215px;
+      height: 34px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text32 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 28px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon19 {
+      align-self: flex-start;
+      left: 215px;
+      position: absolute;
+      width: 15px;
+      height: 27px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dot16 {
+      top: 7px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot17 {
+      top: 12px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .dot18 {
+      top: 17px;
+      left: 6px;
+      position: absolute;
+    }
+
+    .desription19 {
+      width: 230px;
+      height: 19px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #dfdfdf;
+      top: 56px;
+      left: 10px;
+    }
+
+    .subtitle19 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 2px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .body6 {
+      width: 235px;
+      height: 744px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      left: 7.5px;
+      top: 95px;
+      position: relative;
+    }
+
+    .task14 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      position: absolute;
+    }
+
+    .headline20 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      left: 10px;
+      top: 10px;
+    }
+
+    .title39 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text33 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon20 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector114 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription20 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle20 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option14 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type14 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle114 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance14 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text34 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame514 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame614 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료14 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .task15 {
+      width: 215px;
+      height: 142px;
+      border-radius: 5px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #ffffff;
+      top: 169px;
+      left: 0px;
+      position: absolute;
+    }
+
+    .headline21 {
+      width: 215px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .title41 {
+      width: 200px;
+      height: 24px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .text35 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 20px;
+      font-family: Inter;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .icon21 {
+      align-self: flex-start;
+      left: 200px;
+      position: absolute;
+      width: 15px;
+      height: 6px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vector115 {
+      width: 11px;
+      left: 2px;
+      top: 3px;
+      width: 11px;
+      position: absolute;
+    }
+
+    .desription21 {
+      width: 207px;
+      height: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: absolute;
+      background-color: #f5f5f5;
+      top: 54px;
+      left: 10px;
+    }
+
+    .subtitle21 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 4px;
+      top: 5px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .option15 {
+      width: 205px;
+      height: 35px;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      top: 103px;
+      left: 10px;
+    }
+
+    .type15 {
+      align-self: flex-start;
+      left: 5px;
+      top: 14.5px;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      padding: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #42b25b;
+    }
+
+    .rectangle115 {
+      width: 20px;
+      height: 20px;
+      background-color: #42b25b;
+    }
+
+    .performance15 {
+      align-self: flex-start;
+      left: 30px;
+      position: absolute;
+      width: 30px;
+      height: 35px;
+      padding-left: 3px;
+      padding-right: 3px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .text36 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      left: 3px;
+      top: 15px;
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+
+    .frame515 {
+      align-self: flex-start;
+      left: 65px;
+      position: absolute;
+      width: 105px;
+      height: 35px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .frame615 {
+      width: 105px;
+      height: 33px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      position: absolute;
+      background-color: #bbbbbb;
+      top: 7px;
+      left: 20px;
+    }
+
+    .미완료15 {
+      text-align: left;
+      vertical-align: text-top;
+      font-size: 16px;
+      font-family: Inter;
+      align-self: flex-start;
+      left: 30px;
+      top: 7px;
+      position: absolute;
+      line-height: auto;
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='frame1' class='frame1'>
+    <div id='border' class='border'>
+      <div id='header' class='header'>
+        <div id='headline' class='headline'>
+          <div id='title' class='title'>
+            <div id='text' class='text'>
+              월요일</div>
+          </div>
+          <img id='icon' class='icon'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription' class='desription'>
+          <div id='subtitle' class='subtitle'>
+            잔여 공수 0.5</div>
+        </div>
+      </div>
+      <div id='body' class='body'>
+        <div id='task' class='task'>
+          <div id='headline2' class='headline2'>
+            <div id='title3' class='title3'>
+              <div id='text2' class='text2'>
+                생산계획페이지추가</div>
+            </div>
+            <img id='icon2' class='icon2'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription2' class='desription2'>
+            <div id='subtitle2' class='subtitle2'>
+              뉴아세아조인트</div>
+          </div>
+          <div id='option' class='option'>
+            <div id='type' class='type'>
+              <div id='rectangle1' class='rectangle1'>
+              </div>
+            </div>
+            <div id='performance' class='performance'>
+              <div id='text3' class='text3'>
+                0.5</div>
+            </div>
+            <div id='frame5' class='frame5'>
+              <div id='frame6' class='frame6'>
+                <div id='미완료' class='미완료'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='border2' class='border2'>
+      <div id='header2' class='header2'>
+        <div id='headline3' class='headline3'>
+          <div id='title5' class='title5'>
+            <div id='text4' class='text4'>
+              화요일</div>
+          </div>
+          <img id='icon3' class='icon3'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription3' class='desription3'>
+          <div id='subtitle3' class='subtitle3'>
+            잔여 공수 1</div>
+        </div>
+      </div>
+      <div id='body2' class='body2'>
+        <div id='task2' class='task2'>
+          <div id='headline4' class='headline4'>
+            <div id='title7' class='title7'>
+              <div id='text5' class='text5'>
+                Title</div>
+            </div>
+            <img id='icon4' class='icon4'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription4' class='desription4'>
+            <div id='subtitle4' class='subtitle4'>
+              SubTitle</div>
+          </div>
+          <div id='option2' class='option2'>
+            <div id='type2' class='type2'>
+              <div id='rectangle12' class='rectangle12'>
+              </div>
+            </div>
+            <div id='performance2' class='performance2'>
+              <div id='text6' class='text6'>
+                0.5</div>
+            </div>
+            <div id='frame52' class='frame52'>
+              <div id='frame62' class='frame62'>
+                <div id='미완료2' class='미완료2'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task3' class='task3'>
+          <div id='headline5' class='headline5'>
+            <div id='title9' class='title9'>
+              <div id='text7' class='text7'>
+                Title</div>
+            </div>
+            <img id='icon5' class='icon5'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription5' class='desription5'>
+            <div id='subtitle5' class='subtitle5'>
+              SubTitle</div>
+          </div>
+          <div id='option3' class='option3'>
+            <div id='type3' class='type3'>
+              <div id='rectangle13' class='rectangle13'>
+              </div>
+            </div>
+            <div id='performance3' class='performance3'>
+              <div id='text8' class='text8'>
+                0.5</div>
+            </div>
+            <div id='frame53' class='frame53'>
+              <div id='frame63' class='frame63'>
+                <div id='미완료3' class='미완료3'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='border3' class='border3'>
+      <div id='header3' class='header3'>
+        <div id='headline6' class='headline6'>
+          <div id='title11' class='title11'>
+            <div id='text9' class='text9'>
+              수요일</div>
+          </div>
+          <img id='icon6' class='icon6'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription6' class='desription6'>
+          <div id='subtitle6' class='subtitle6'>
+            잔여 공수 1.5</div>
+        </div>
+      </div>
+      <div id='body3' class='body3'>
+        <div id='task4' class='task4'>
+          <div id='headline7' class='headline7'>
+            <div id='title13' class='title13'>
+              <div id='text10' class='text10'>
+                Title</div>
+            </div>
+            <img id='icon7' class='icon7'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription7' class='desription7'>
+            <div id='subtitle7' class='subtitle7'>
+              SubTitle</div>
+          </div>
+          <div id='option4' class='option4'>
+            <div id='type4' class='type4'>
+              <div id='rectangle14' class='rectangle14'>
+              </div>
+            </div>
+            <div id='performance4' class='performance4'>
+              <div id='text11' class='text11'>
+                0.5</div>
+            </div>
+            <div id='frame54' class='frame54'>
+              <div id='frame64' class='frame64'>
+                <div id='미완료4' class='미완료4'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task5' class='task5'>
+          <div id='headline8' class='headline8'>
+            <div id='title15' class='title15'>
+              <div id='text12' class='text12'>
+                Title</div>
+            </div>
+            <img id='icon8' class='icon8'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription8' class='desription8'>
+            <div id='subtitle8' class='subtitle8'>
+              SubTitle</div>
+          </div>
+          <div id='option5' class='option5'>
+            <div id='type5' class='type5'>
+              <div id='rectangle15' class='rectangle15'>
+              </div>
+            </div>
+            <div id='performance5' class='performance5'>
+              <div id='text13' class='text13'>
+                0.5</div>
+            </div>
+            <div id='frame55' class='frame55'>
+              <div id='frame65' class='frame65'>
+                <div id='미완료5' class='미완료5'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task6' class='task6'>
+          <div id='headline9' class='headline9'>
+            <div id='title17' class='title17'>
+              <div id='text14' class='text14'>
+                Title</div>
+            </div>
+            <img id='icon9' class='icon9'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription9' class='desription9'>
+            <div id='subtitle9' class='subtitle9'>
+              SubTitle</div>
+          </div>
+          <div id='option6' class='option6'>
+            <div id='type6' class='type6'>
+              <div id='rectangle16' class='rectangle16'>
+              </div>
+            </div>
+            <div id='performance6' class='performance6'>
+              <div id='text15' class='text15'>
+                0</div>
+            </div>
+            <div id='frame56' class='frame56'>
+              <div id='frame66' class='frame66'>
+                <div id='미완료6' class='미완료6'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task7' class='task7'>
+          <div id='headline10' class='headline10'>
+            <div id='title19' class='title19'>
+              <div id='text16' class='text16'>
+                Title</div>
+            </div>
+            <img id='icon10' class='icon10'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription10' class='desription10'>
+            <div id='subtitle10' class='subtitle10'>
+              SubTitle</div>
+          </div>
+          <div id='option7' class='option7'>
+            <div id='type7' class='type7'>
+              <div id='rectangle17' class='rectangle17'>
+              </div>
+            </div>
+            <div id='performance7' class='performance7'>
+              <div id='text17' class='text17'>
+                0</div>
+            </div>
+            <div id='frame57' class='frame57'>
+              <div id='frame67' class='frame67'>
+                <div id='미완료7' class='미완료7'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task8' class='task8'>
+          <div id='headline11' class='headline11'>
+            <div id='title21' class='title21'>
+              <div id='text18' class='text18'>
+                Title</div>
+            </div>
+            <img id='icon11' class='icon11'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription11' class='desription11'>
+            <div id='subtitle11' class='subtitle11'>
+              SubTitle</div>
+          </div>
+          <div id='option8' class='option8'>
+            <div id='type8' class='type8'>
+              <div id='rectangle18' class='rectangle18'>
+              </div>
+            </div>
+            <div id='performance8' class='performance8'>
+              <div id='text19' class='text19'>
+                0</div>
+            </div>
+            <div id='frame58' class='frame58'>
+              <div id='frame68' class='frame68'>
+                <div id='미완료8' class='미완료8'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task9' class='task9'>
+          <div id='headline12' class='headline12'>
+            <div id='title23' class='title23'>
+              <div id='text20' class='text20'>
+                Title</div>
+            </div>
+            <img id='icon12' class='icon12'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAQSURBVHgBAQUA+v8AAAAAfwCEAIBlsiAnAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription12' class='desription12'>
+            <div id='subtitle12' class='subtitle12'>
+              SubTitle</div>
+          </div>
+          <div id='option9' class='option9'>
+            <div id='type9' class='type9'>
+              <div id='rectangle19' class='rectangle19'>
+              </div>
+            </div>
+            <div id='performance9' class='performance9'>
+              <div id='text21' class='text21'>
+                0</div>
+            </div>
+            <div id='frame59' class='frame59'>
+              <div id='frame69' class='frame69'>
+                <div id='미완료9' class='미완료9'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='border4' class='border4'>
+      <div id='header4' class='header4'>
+        <div id='headline13' class='headline13'>
+          <div id='title25' class='title25'>
+            <div id='text22' class='text22'>
+              목요일</div>
+          </div>
+          <img id='icon13' class='icon13'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription13' class='desription13'>
+          <div id='subtitle13' class='subtitle13'>
+            잔여 공수 0.25</div>
+        </div>
+      </div>
+      <div id='body4' class='body4'>
+        <div id='task10' class='task10'>
+          <div id='headline14' class='headline14'>
+            <div id='title27' class='title27'>
+              <div id='text23' class='text23'>
+                Title</div>
+            </div>
+            <img id='icon14' class='icon14'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription14' class='desription14'>
+            <div id='subtitle14' class='subtitle14'>
+              SubTitle</div>
+          </div>
+          <div id='option10' class='option10'>
+            <div id='type10' class='type10'>
+              <div id='rectangle110' class='rectangle110'>
+              </div>
+            </div>
+            <div id='performance10' class='performance10'>
+              <div id='text24' class='text24'>
+                0.5</div>
+            </div>
+            <div id='frame510' class='frame510'>
+              <div id='frame610' class='frame610'>
+                <div id='미완료10' class='미완료10'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task11' class='task11'>
+          <div id='headline15' class='headline15'>
+            <div id='title29' class='title29'>
+              <div id='text25' class='text25'>
+                Title</div>
+            </div>
+            <img id='icon15' class='icon15'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription15' class='desription15'>
+            <div id='subtitle15' class='subtitle15'>
+              SubTitle</div>
+          </div>
+          <div id='option11' class='option11'>
+            <div id='type11' class='type11'>
+              <div id='rectangle111' class='rectangle111'>
+              </div>
+            </div>
+            <div id='performance11' class='performance11'>
+              <div id='text26' class='text26'>
+                0.5</div>
+            </div>
+            <div id='frame511' class='frame511'>
+              <div id='frame611' class='frame611'>
+                <div id='미완료11' class='미완료11'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='border5' class='border5'>
+      <div id='header5' class='header5'>
+        <div id='headline16' class='headline16'>
+          <div id='title31' class='title31'>
+            <div id='text27' class='text27'>
+              금요일</div>
+          </div>
+          <img id='icon16' class='icon16'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription16' class='desription16'>
+          <div id='subtitle16' class='subtitle16'>
+            잔여 공수 1</div>
+        </div>
+      </div>
+      <div id='body5' class='body5'>
+        <div id='task12' class='task12'>
+          <div id='headline17' class='headline17'>
+            <div id='title33' class='title33'>
+              <div id='text28' class='text28'>
+                Title</div>
+            </div>
+            <img id='icon17' class='icon17'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription17' class='desription17'>
+            <div id='subtitle17' class='subtitle17'>
+              SubTitle</div>
+          </div>
+          <div id='option12' class='option12'>
+            <div id='type12' class='type12'>
+              <div id='rectangle112' class='rectangle112'>
+              </div>
+            </div>
+            <div id='performance12' class='performance12'>
+              <div id='text29' class='text29'>
+                0.5</div>
+            </div>
+            <div id='frame512' class='frame512'>
+              <div id='frame612' class='frame612'>
+                <div id='미완료12' class='미완료12'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task13' class='task13'>
+          <div id='headline18' class='headline18'>
+            <div id='title35' class='title35'>
+              <div id='text30' class='text30'>
+                Title</div>
+            </div>
+            <img id='icon18' class='icon18'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription18' class='desription18'>
+            <div id='subtitle18' class='subtitle18'>
+              SubTitle</div>
+          </div>
+          <div id='option13' class='option13'>
+            <div id='type13' class='type13'>
+              <div id='rectangle113' class='rectangle113'>
+              </div>
+            </div>
+            <div id='performance13' class='performance13'>
+              <div id='text31' class='text31'>
+                0.5</div>
+            </div>
+            <div id='frame513' class='frame513'>
+              <div id='frame613' class='frame613'>
+                <div id='미완료13' class='미완료13'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='border6' class='border6'>
+      <div id='header6' class='header6'>
+        <div id='headline19' class='headline19'>
+          <div id='title37' class='title37'>
+            <div id='text32' class='text32'>
+              Task</div>
+          </div>
+          <img id='icon19' class='icon19'
+            src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAbCAYAAACjkdXHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA3SURBVHgB7dAxDgAgCEPR78nh5ujAiInGSdKXEJamQ0Ea8HWRvzTYi8NcybLA+Iqjwa44GkxeTSQDDvjfd6bUAAAAAElFTkSuQmCC' />
+          </img>
+        </div>
+        <div id='desription19' class='desription19'>
+          <div id='subtitle19' class='subtitle19'>
+            등록 된 이슈 5</div>
+        </div>
+      </div>
+      <div id='body6' class='body6'>
+        <div id='task14' class='task14'>
+          <div id='headline20' class='headline20'>
+            <div id='title39' class='title39'>
+              <div id='text33' class='text33'>
+                Title</div>
+            </div>
+            <img id='icon20' class='icon20'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription20' class='desription20'>
+            <div id='subtitle20' class='subtitle20'>
+              SubTitle</div>
+          </div>
+          <div id='option14' class='option14'>
+            <div id='type14' class='type14'>
+              <div id='rectangle114' class='rectangle114'>
+              </div>
+            </div>
+            <div id='performance14' class='performance14'>
+              <div id='text34' class='text34'>
+                0.5</div>
+            </div>
+            <div id='frame514' class='frame514'>
+              <div id='frame614' class='frame614'>
+                <div id='미완료14' class='미완료14'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='task15' class='task15'>
+          <div id='headline21' class='headline21'>
+            <div id='title41' class='title41'>
+              <div id='text35' class='text35'>
+                Title</div>
+            </div>
+            <img id='icon21' class='icon21'
+              src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC' />
+            </img>
+          </div>
+          <div id='desription21' class='desription21'>
+            <div id='subtitle21' class='subtitle21'>
+              SubTitle</div>
+          </div>
+          <div id='option15' class='option15'>
+            <div id='type15' class='type15'>
+              <div id='rectangle115' class='rectangle115'>
+              </div>
+            </div>
+            <div id='performance15' class='performance15'>
+              <div id='text36' class='text36'>
+                0.5</div>
+            </div>
+            <div id='frame515' class='frame515'>
+              <div id='frame615' class='frame615'>
+                <div id='미완료15' class='미완료15'>
+                  미완료</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
