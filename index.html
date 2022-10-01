@@ -163,7 +163,7 @@
       flex-direction: column;
       gap: 20px;
       background-color: #ffffff;
-      cursor: pointer;
+      cursor: default;
     }
 
     .header {
@@ -208,7 +208,7 @@
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAiSURBVHgB1cshDgAACMPAho/v6YDBI7cmJwtOafWTbiriG677Cve92XguAAAAAElFTkSuQmCC");
       background-position: right;
       background-repeat: no-repeat;
-      cursor: default;
+      cursor: pointer;
     }
 
     .description {
@@ -355,6 +355,13 @@
   <script>
     let dragged;
     let originAncestor;
+
+    const removeTask = e => {
+      const taskBody = e.target.closest('.task-body');
+      const removedTask = e.target.closest('.task');
+
+      taskBody.removeChild(removedTask);
+    }
   </script>
 </head>
 
@@ -392,7 +399,7 @@
         <div class='title'>
           <div class='title-text'>${title}</div>
         </div>
-        <div class='icon-delete'></div>
+        <div class='icon-delete' onclick="removeTask(event)"></div>
       </div>
       <div class='description'>
         <div class='description-text'>${description}</div>
@@ -504,6 +511,8 @@
         for (const taskList of taskLists) {
           taskList.classList.remove('task-body-dragging');
         }
+        dragged = null;
+        originAncestor = null;
       });
 
       document.addEventListener("dragover", e => {
