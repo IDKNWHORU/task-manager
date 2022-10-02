@@ -226,7 +226,6 @@
       justify-content: flex-start;
       align-items: flex-start;
       background-color: #cccccc;
-      cursor: text;
     }
 
     .description-text {
@@ -237,6 +236,7 @@
       align-self: flex-start;
       line-height: auto;
       color: #000000;
+      cursor: text;
     }
 
     .options {
@@ -257,6 +257,7 @@
       height: 20px;
       padding: 0px;
       cursor: default;
+      display: flex;
     }
 
     .squarebox {
@@ -309,11 +310,22 @@
       align-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      background-color: #bbbbbb;
       cursor: default;
     }
 
-    .combobox-text {
+    .combobox[data-status="대기"] {
+      background-color: #bbbbbb;
+    }
+
+    .combobox[data-status="진행중"] {
+      background-color: dodgerblue;
+    }
+
+    .combobox[data-status="완료"] {
+      background-color: forestgreen;
+    }
+
+    .combobox .combobox-text {
       text-align: left;
       vertical-align: text-top;
       font-size: 16px;
@@ -351,6 +363,54 @@
       width: 237px;
       overflow: hidden;
     }
+
+    .combo-editor {
+      width: 105px;
+      height: 33px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    #squarebox {
+      width: 0px;
+      height: 0px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    #squarebox:checked+label .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-item {
+      display: flex;
+    }
+
+    .squarebox-blue {
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+    }
+
+    .squarebox-green {
+      width: 20px;
+      height: 20px;
+      background-color: green;
+    }
+
+    .squarebox-red {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+    }
   </style>
   <script>
     let dragged;
@@ -361,6 +421,128 @@
       const removedTask = e.target.closest('.task');
 
       taskBody.removeChild(removedTask);
+    }
+
+    const editTitle = e => {
+      const titleText = e.target;
+      const title = e.target.closest('.title');
+
+      title.innerHTML = `<input class="title-editor" value=${titleText.innerText} />`;
+
+      Promise.resolve().then(() => {
+        const titleEditor = title.querySelector('.title-editor');
+        titleEditor.focus();
+        titleEditor.addEventListener('blur', () => {
+          const text = titleEditor.value || 'Task';
+
+          title.innerHTML = `<div class='title-text' onclick='editTitle(event)'>${text}</div>`;
+        });
+        titleEditor.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            titleEditor.blur();
+          }
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            const description = title.closest('.task').querySelector('.description');
+            description.querySelector('.description-text').click();
+          }
+        });
+      });
+    }
+
+    const editDescription = e => {
+      const descriptionText = e.target;
+      const description = e.target.closest('.description');
+
+      description.innerHTML = `<input class="description-editor" value=${descriptionText.innerText} />`;
+
+      Promise.resolve().then(() => {
+        const descriptionEditor = description.querySelector('.description-editor');
+        descriptionEditor.focus();
+        descriptionEditor.addEventListener('blur', () => {
+          const text = descriptionEditor.value || 'Description';
+          description.innerHTML =
+            `<div class='description-text' onclick='editDescription(event)'>${text}</div>`;
+        });
+        descriptionEditor.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            descriptionEditor.blur();
+          }
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            const options = description.closest('.task').querySelector('.options');
+            options.querySelector('.option-timebox').querySelector('.timebox-text').click();
+          }
+        });
+      });
+    }
+
+    const editTime = e => {
+      const timeText = e.target;
+      const time = e.target.closest('.option-timebox');
+
+      time.innerHTML = `<input class="time-editor" value=${timeText.innerText} />`;
+
+      Promise.resolve().then(() => {
+        const timeEditor = time.querySelector('.time-editor');
+        timeEditor.focus();
+        timeEditor.addEventListener('blur', () => {
+          const text = timeEditor.value || '00:00';
+          time.innerHTML = `<div class='timebox-text' onclick='editTime(event)'>${text}</div>`;
+        });
+        timeEditor.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            timeEditor.blur();
+          }
+
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            timeEditor.blur();
+            const combobox = time.closest('.task').querySelector('.combobox');
+            combobox.click();
+          }
+        });
+      });
+    }
+
+    const editCombo = e => {
+      const comboText = e.target;
+      const combo = e.target.closest('.combobox');
+
+      const options = ['대기', '진행중', '완료'];
+
+      const selectOptionsHTML = options.map(option => {
+        if (option === comboText.innerText) {
+          return `<option value=${option} selected>${option}</option>`;
+        }
+        return `<option value=${option}><div style="background-color: green;">${option}</div></option>`;
+      }).join('');
+
+      combo.innerHTML = `
+      <select class='combo-editor' onclick='event.stopPropagation()'>
+        ${selectOptionsHTML}
+      </select>`;
+
+      Promise.resolve().then(() => {
+        const comboEditor = combo.querySelector('.combo-editor');
+        comboEditor.focus();
+        comboEditor.addEventListener('blur', () => {
+          const text = comboEditor.value || 'Combo';
+          combo.innerHTML = `<div class='combobox-text'>${text}</div>`;
+          combo.dataset.status = text;
+        });
+        comboEditor.addEventListener('keydown', e => {
+          if (e.key === 'Enter') {
+            comboEditor.blur();
+          }
+          if (e.key === 'Tab') {
+            e.preventDefault();
+            comboEditor.blur();
+            const options = combo.closest('.task').querySelector('.options');
+            options.querySelector('.option-timebox').querySelector('.timebox-text').click();
+          }
+        });
+      });
     }
   </script>
 </head>
@@ -394,25 +576,42 @@
       hour,
       status
     }) => `
-    <div class='task' draggable="true">
+    <div class='task' draggable='true'>
       <div class='header'>
         <div class='title'>
-          <div class='title-text'>${title}</div>
+          <div class='title-text' onclick='editTitle(event)'>${title}</div>
         </div>
-        <div class='icon-delete' onclick="removeTask(event)"></div>
+        <div class='icon-delete' onclick='removeTask(event)'></div>
       </div>
       <div class='description'>
-        <div class='description-text'>${description}</div>
+        <div class='description-text' onclick='editDescription(event)'>${description}</div>
       </div>
       <div class='options'>
         <div class='option-squarebox'>
-          <div class='squarebox'></div>
+          <input type='checkbox' id='squarebox' />
+          <label class="btn" for="squarebox">
+            <div class='squarebox'></div>
+            <div class="dropdown-content">
+              <div class="dropdown-item">
+                <div class='squarebox-green' data-bgcolor='blue'></div>
+                <div>신규</div>
+              </div>
+              <div class="dropdown-item">
+                <div class='squarebox-blue'></div>
+                <div>변경</div>
+              </div>
+              <div class="dropdown-item">
+                <div class='squarebox-red'></div>
+                <div>버그</div>
+              </div>
+            </div>
+          </label>
         </div>
         <div class='option-timebox'>
-          <div class='timebox-text'>${hour}</div>
+          <div class='timebox-text' onclick='editTime(event)'>${hour}</div>
         </div>
         <div class='option-combobox'>
-          <div class='combobox'>
+          <div class='combobox' onclick='editCombo(event)' data-status=${status}>
             <div class='combobox-text'>${status}</div>
           </div>
         </div>
@@ -442,42 +641,42 @@
     document.getElementsByClassName('task-board')[0].innerHTML = taskLists.join('');
     Promise.resolve().then(() => {
       const taskLists = document.getElementsByClassName('task-body');
-      const taskBodyMask = `<div class="task-body-mask"></div>`;
+      const taskBodyMask = `<div class='task-body-mask'></div>`;
       const tasks = [task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       }), task({
         title: 'Task',
-        description: 'Task Description',
-        hour: '0시간',
-        status: '상태'
+        description: 'Description',
+        hour: '00:00',
+        status: '대기'
       })];
 
       for (const taskList of taskLists) {
@@ -497,7 +696,7 @@
           if (ancestor !== originAncestor) {
             taskBodyMask.classList.add('visible');
           }
-          taskBodyMask.classList.remove("dragover");
+          taskBodyMask.classList.remove('dragover');
         }
         for (const taskList of taskLists) {
           taskList.classList.add('task-body-dragging');
@@ -515,19 +714,19 @@
         originAncestor = null;
       });
 
-      document.addEventListener("dragover", e => {
+      document.addEventListener('dragover', e => {
         e.preventDefault();
       }, false);
 
-      document.addEventListener("dragenter", e => {
-        if (e.target.classList.contains("task-body-mask")) {
-          e.target.classList.add("dragover");
+      document.addEventListener('dragenter', e => {
+        if (e.target.classList.contains('task-body-mask')) {
+          e.target.classList.add('dragover');
         }
       });
 
-      document.addEventListener("dragleave", e => {
-        if (e.target.classList.contains("task-body-mask")) {
-          event.target.classList.remove("dragover");
+      document.addEventListener('dragleave', e => {
+        if (e.target.classList.contains('task-body-mask')) {
+          event.target.classList.remove('dragover');
         }
       });
 
