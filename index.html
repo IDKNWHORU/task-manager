@@ -426,8 +426,9 @@
     const editTitle = e => {
       const titleText = e.target;
       const title = e.target.closest('.title');
+      console.log(titleText.innerText);
 
-      title.innerHTML = `<input class="title-editor" value=${titleText.innerText} />`;
+      title.innerHTML = `<input class="title-editor" value="${titleText.innerText}" />`;
 
       Promise.resolve().then(() => {
         const titleEditor = title.querySelector('.title-editor');
@@ -441,10 +442,15 @@
           if (e.key === 'Enter') {
             titleEditor.blur();
           }
-          if (e.key === 'Tab') {
+          
+          if(e.keyCode === 9) {
             e.preventDefault();
-            const description = title.closest('.task').querySelector('.description');
-            description.querySelector('.description-text').click();
+            if(e.shiftKey){
+              console.log('shift + tab');
+            }else {
+              const description = title.closest('.task').querySelector('.description');
+              description.querySelector('.description-text').click();
+            }
           }
         });
       });
@@ -454,7 +460,7 @@
       const descriptionText = e.target;
       const description = e.target.closest('.description');
 
-      description.innerHTML = `<input class="description-editor" value=${descriptionText.innerText} />`;
+      description.innerHTML = `<input class="description-editor" value="${descriptionText.innerText}" />`;
 
       Promise.resolve().then(() => {
         const descriptionEditor = description.querySelector('.description-editor');
@@ -468,10 +474,16 @@
           if (e.key === 'Enter') {
             descriptionEditor.blur();
           }
-          if (e.key === 'Tab') {
+
+          if(e.keyCode === 9) {
             e.preventDefault();
-            const options = description.closest('.task').querySelector('.options');
-            options.querySelector('.option-timebox').querySelector('.timebox-text').click();
+            if(e.shiftKey){
+              const title = description.closest('.task').querySelector('.title');
+              title.querySelector('.title-text').click();
+            }else {
+              const options = description.closest('.task').querySelector('.options');
+              options.querySelector('.option-timebox').querySelector('.timebox-text').click();
+            }
           }
         });
       });
@@ -495,11 +507,15 @@
             timeEditor.blur();
           }
 
-          if (e.key === 'Tab') {
+          if(e.keyCode === 9) {
             e.preventDefault();
-            timeEditor.blur();
-            const combobox = time.closest('.task').querySelector('.combobox');
-            combobox.click();
+            if(e.shiftKey){
+              const description = time.closest('.task').querySelector('.description');
+              description.querySelector('.description-text').click();
+            }else {
+              const combobox = time.closest('.task').querySelector('.combobox');
+              combobox.click();
+            }
           }
         });
       });
@@ -535,11 +551,14 @@
           if (e.key === 'Enter') {
             comboEditor.blur();
           }
-          if (e.key === 'Tab') {
+          if(e.keyCode === 9) {
             e.preventDefault();
-            comboEditor.blur();
-            const options = combo.closest('.task').querySelector('.options');
-            options.querySelector('.option-timebox').querySelector('.timebox-text').click();
+            if(e.shiftKey){
+              const time = combo.closest('.task').querySelector('.option-timebox');
+              time.querySelector('.timebox-text').click();
+            }else {
+              console.log('tab');
+            }
           }
         });
       });
