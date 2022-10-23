@@ -1,4 +1,4 @@
-export const taskList = ({
+export const getTaskPanelElement = ({
     title,
     description
 }) => `
@@ -18,3 +18,10 @@ export const taskList = ({
     <div class='task-body'>
     </div>
   </div>`;
+
+  export default (targetElement, {panels}) => {
+    const newTaskBoard = targetElement.cloneNode(true);
+    const taskPanelElements = panels.map(getTaskPanelElement).join('');
+    newTaskBoard.innerHTML = taskPanelElements;
+    return newTaskBoard;
+  }
