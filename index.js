@@ -1,4 +1,7 @@
-import appView from './view/app.js';
+import taskBoardView from './view/panels.js';
+import registry from './registry.js';
+
+registry.add('taskBoard', taskBoardView);
 
 const state = {
   panels: [{
@@ -10,9 +13,9 @@ const state = {
   }]
 }
 
-const main = document.body;
 
 window.requestAnimationFrame(() => {
-  const newMain = appView(main, state)
-  main.replaceWith(newMain)
+  const main = document.body;
+  const newMain = registry.renderRoot(main, state);
+  main.replaceWith(newMain);
 })
