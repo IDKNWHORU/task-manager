@@ -1,7 +1,9 @@
 import taskBoardView from './view/panels.js';
 import registry from './registry.js';
 import applyDiff from './applyDiff.js';
+import appView from './view/board.js';
 
+registry.add('app', appView)
 registry.add('taskBoard', taskBoardView);
 
 const state = {
@@ -18,6 +20,7 @@ const render = () => {
   window.requestAnimationFrame(() => {
     const main = document.body;
     const newMain = registry.renderRoot(main, state);
+    console.log({main, newMain});
     applyDiff(document.body, main, newMain);
   })
 }

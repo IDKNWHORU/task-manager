@@ -26,7 +26,12 @@
       </div>
     </div>
   </template>
-  <div class='task-board' data-component="taskBoard"></div>
+  <template id="task-board">
+    <div class='task-board' data-component="taskBoard"></div>
+  </template>
+  <div id="root">
+    <div data-component="app"></div>
+  </div>
   <script type="module" src="index.js"></script>
 </body>
 </html>
