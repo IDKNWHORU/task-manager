@@ -1,27 +1,31 @@
+let template;
+
+const createNewTaskPanelNode = () => {
+  if(!template) {
+    template = document.getElementById('task-list');
+  }
+
+  return template.content.firstElementChild.cloneNode(true);
+}
+
 export const getTaskPanelElement = ({
     title,
     description
-}) => `
-  <div class='task-list'>
-    <div class='task-header'>
-      <div class='task-headline'>
-        <div class='task-headline-title'>
-          <div class='task-headline-title-text'>${title}</div>
-        </div>
-        <div class='icon-vertical-dot'></div>
-        </img>
-      </div>
-      <div class='task-header-description'>
-        <div class='task-header-description-text'>${description}</div>
-      </div>
-    </div>
-    <div class='task-body'>
-    </div>
-  </div>`;
+}) => {
+  const element = createNewTaskPanelNode();
+
+  element.querySelector('.task-headline-title-text').textContent=title;
+  element.querySelector('.task-header-description-text').textContent=description;
+
+  return element;
+}
 
   export default (targetElement, {panels}) => {
     const newTaskBoard = targetElement.cloneNode(true);
-    const taskPanelElements = panels.map(getTaskPanelElement).join('');
-    newTaskBoard.innerHTML = taskPanelElements;
+
+    newTaskBoard.innerHTML = '';
+
+    panels.map(getTaskPanelElement).forEach(element => newTaskBoard.appendChild(element));
+    
     return newTaskBoard;
   }
